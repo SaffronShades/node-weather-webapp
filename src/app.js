@@ -100,6 +100,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Node JS Web Server is up and running in port 3000");
 });
