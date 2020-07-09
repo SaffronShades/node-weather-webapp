@@ -14,11 +14,14 @@ const getWeatherDetails = (latitude, longitude, location, callback) => {
             } else {                
                 const currentTemp = body.current.temperature;
                 const precipitationProbability = body.current.feelslike;
+                const windDirection = body.current.wind_dir;
+                const humidity = body.current.humidity;
                 const weatherData = body.current.weather_descriptions;
                 const locationSpecifics = body.location.name;
                 const printData = 'It is currently ' + currentTemp + ' degrees.' 
                 + ' But feels like ' + precipitationProbability + ' degrees out there.'
-                + ' Weather is ' + weatherData[0];
+                + ' Weather is ' + weatherData[0] + '. Wind direction is ' + windDirection
+                + '. Humidity is ' + humidity + '.';
 
                 const weatherDataResponse = {
                     data: printData,
